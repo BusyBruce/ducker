@@ -1,10 +1,10 @@
 .DEFAULT_GOAL := run
 
-DUCKDB_VERSION=v0.7.1
+DUCKDB_VERSION=v1.0.0
 PRQL_VERSION=latest
 EXTENSIONS="fts httpfs icu json parquet postgres_scanner sqlite_scanner substrait"
-IMAGE_NAME := duckerlabs/ducker:$(DUCKDB_VERSION)
-LATEST_IMAGE_NAME := duckerlabs/ducker:latest
+IMAGE_NAME := flyskype2021/ducker:$(DUCKDB_VERSION)
+LATEST_IMAGE_NAME := flyskype2021/ducker:latest
 
 build:
 	@docker build \
