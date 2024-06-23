@@ -10,9 +10,13 @@ The extensions included and loaded are:
   * [icu](https://duckdb.org/2022/01/06/time-zones.html)
   * [json](https://duckdb.org/docs/extensions/json)
   * [parquet](https://duckdb.org/docs/data/parquet)
-  * [postgres_scanner](https://duckdb.org/docs/extensions/postgres_scanner)
-  * [sqlite_scanner](https://duckdb.org/docs/extensions/sqlite_scanner)
+  * [mysql](https://duckdb.org/docs/extensions/mysql)
+  * [postgres](https://duckdb.org/docs/extensions/postgres)
+  * [sqlite](https://duckdb.org/docs/extensions/sqlite)
   * [substrait](https://duckdb.org/docs/extensions/substrait)
+  * [iceberg](https://duckdb.org/docs/extensions/iceberg)
+  * [arrow](https://duckdb.org/docs/extensions/arrow)
+  * [spatial](https://duckdb.org/docs/extensions/spatial)
   * [duckdb-prql](https://github.com/ywelsch/duckdb-prql)
     * This means `ducker` can quack SQL or [PRQL](https://github.com/PRQL/prql)!
 
