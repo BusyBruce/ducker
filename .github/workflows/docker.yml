@@ -20,6 +20,8 @@ jobs:
       with:
         username: ${{secrets.REGISTRY_USERNAME}}
         password: ${{secrets.REGISTRY_PASSWORD}}
+        
+    - uses: actions/checkout@v3
 
     - name: Sync README To DockerHub
       uses: meeDamian/sync-readme@v1.0.6
@@ -28,6 +30,5 @@ jobs:
         pass: ${{secrets.REGISTRY_PASSWORD}}
         slug: ${{ env.DOCKERHUB_REPO }}
         
-    - uses: actions/checkout@v3
     - name: Build the Docker image
       run: make push
