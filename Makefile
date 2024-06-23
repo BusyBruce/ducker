@@ -2,7 +2,7 @@
 
 DUCKDB_VERSION=v1.0.0
 PRQL_VERSION=latest
-EXTENSIONS="fts httpfs icu json parquet mysql postgres sqlite substrait iceberg arrow"
+EXTENSIONS="fts httpfs icu json parquet mysql postgres sqlite substrait iceberg arrow spatial"
 IMAGE_NAME := flyskype2021/ducker:$(DUCKDB_VERSION)
 LATEST_IMAGE_NAME := flyskype2021/ducker:latest
 
