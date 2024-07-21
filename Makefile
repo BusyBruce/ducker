@@ -9,9 +9,8 @@ LATEST_IMAGE_NAME := flyskype2021/ducker:latest
 build:
 	@docker build \
 		--build-arg DUCKDB_VERSION=$(DUCKDB_VERSION) \
-		--build-arg PRQL_VERSION=$(PRQL_VERSION) \
 		--build-arg EXTENSIONS=$(EXTENSIONS) \
-		--build-arg LOAD_EXTENSIONS=$(LOAD_EXTENSIONS) \
+                --build-arg COMMUNITY_EXTENSIONS=$(COMMUNITY_EXTENSIONS) \
 		-t $(IMAGE_NAME) \
 		-t $(LATEST_IMAGE_NAME) \
 		.
