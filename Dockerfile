@@ -39,12 +39,12 @@ RUN for e in $EXTENSIONS; do \
 
 ARG PRQL_VERSION
 
-RUN duckdb -unsigned -c "SET custom_extension_repository='http://welsch.lu/duckdb/prql/$PRQL_VERSION'; INSTALL prql;" \
+RUN duckdb -c "INSTALL prql FROM community;" \
     && echo "LOAD prql;" >> $HOME/.duckdbrc
 
 # Add ducker.sh entrypoint
 COPY ducker.sh /usr/local/bin/ducker
 
-ENTRYPOINT ["/usr/local/bin/ducker", "-unsigned"]
-#ENTRYPOINT ["/usr/local/bin/duckdb", "-unsigned"]
+ENTRYPOINT ["/usr/local/bin/ducker"]
+#ENTRYPOINT ["/usr/local/bin/duckdb"]
 CMD []
