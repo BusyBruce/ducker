@@ -26,7 +26,6 @@ RUN echo ".prompt '⚫◗ '" > $HOME/.duckdbrc
 # ------------------
 
 ARG EXTENSIONS
-ARG LOAD_EXTENSIONS
 
 RUN for e in $EXTENSIONS; do \
     echo "Installing $e ..."; \
@@ -34,13 +33,16 @@ RUN for e in $EXTENSIONS; do \
     echo "LOAD $e;" >> $HOME/.duckdbrc; \
     done
 
-# Install PRQL
+# Install Community Extensions
 # ------------
 
-ARG PRQL_VERSION
+ARG COMMUNITY_EXTENSIONS
 
-RUN duckdb -c "INSTALL prql FROM community;" \
-    && echo "LOAD prql;" >> $HOME/.duckdbrc
+RUN for e in $COMMUNITY_EXTENSIONS; do \
+    echo "Installing $e ..."; \
+    duckdb -c "INSTALL $e FROM community;"; \
+    echo "LOAD $e;" >> $HOME/.duckdbrc; \
+    done
 
 # Add ducker.sh entrypoint
 COPY ducker.sh /usr/local/bin/ducker
