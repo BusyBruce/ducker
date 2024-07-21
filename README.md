@@ -17,13 +17,15 @@ The extensions included and loaded are:
   * [iceberg](https://duckdb.org/docs/extensions/iceberg)
   * [arrow](https://duckdb.org/docs/extensions/arrow)
   * [spatial](https://duckdb.org/docs/extensions/spatial)
-  * [duckdb-prql](https://github.com/ywelsch/duckdb-prql)
+  * [prql](https://github.com/ywelsch/duckdb-prql)
     * This means `ducker` can quack SQL or [PRQL](https://github.com/PRQL/prql)!
+  * [scrooge](https://github.com/pdet/Scrooge-McDuck)
+  * [evalexpr_rhai](https://github.com/rustyconover/duckdb-evalexpr-rhai-extension)
 
 ## Quickstart
 
 ```sh
-alias ducker='docker run --rm -i $([ ! -t 0 ] || echo "-t") -v $(pwd):/data -w /data duckerlabs/ducker'
+alias ducker='docker run --rm -i $([ ! -t 0 ] || echo "-t") -v $(pwd):/data -w /data flyskype2021/ducker'
 ```
 then `ducker` gives you a [DuckDB](https://duckdb.org/) shell with the included extensions already enabled!
 
