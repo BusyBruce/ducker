@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := run
 
-DUCKDB_VERSION=v1.0.0
+DUCKDB_VERSION=v1.1.1
 EXTENSIONS="fts httpfs icu json parquet mysql postgres sqlite substrait iceberg arrow spatial"
 COMMUNITY_EXTENSIONS="prql scrooge evalexpr_rhai"
 IMAGE_NAME := flyskype2021/ducker:$(DUCKDB_VERSION)
